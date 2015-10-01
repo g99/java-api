@@ -10,7 +10,7 @@ public class HanbitSchool {
 		String hak, name;
 		int kor, eng, math;
 		while (true) {
-			System.out.println("1.성적등록 2.학적부리스트보기 3.학번으로검색 4.이름으로검색 5.성적순위출력 6.이름순출력 7.소트사용정렬 8. 종료");
+			System.out.println("1.성적등록 2.학적부리스트보기 3.학번으로검색 4.이름으로검색 5.성적순위출력 6.이름순출력 7.소트성적순위출력 8. 종료");
 			switch (scanner.nextInt()) {
 			case 1:
 				System.out.print("학번 : ");
@@ -47,10 +47,10 @@ public class HanbitSchool {
 				System.out.println(service.ascGradeByName());
 				break;
 			case 7:
-				service.descUseSort();
-//				for (int i = 0; i < sort.length; i++) {
-//					System.out.println(sort[i].intValue());
-//				}
+				Grade[] sort = service.descUseSort();
+				for (int i = 0; i < sort.length; i++) {
+					System.out.println(sort[i]);
+				}
 				break;
 			case 8:
 				System.out.println("===========프로그램을 종료합니다.============\n");

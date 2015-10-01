@@ -9,5 +9,5 @@ public interface GradeService {
 	public Vector<Grade> searchByName(String name);
 	public Vector<Grade> descGradeByTotal(); //총점을 내림차순으로 정렬(100, 90...)
 	public Vector<Grade> ascGradeByName();   //이름에 따라 오름차순으로 정렬(ㄱ,ㄴ,ㄷ)
-	public void descUseSort();
+	public Grade[] descUseSort();
 }

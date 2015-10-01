@@ -75,23 +75,20 @@ public class GradeServiceImpl implements GradeService{
 		return vec;
 	}
 	@Override
-	public void descUseSort() {
-		Object[] scores = new Integer[vec.size()];
-		System.out.println("됨됨ㄷ묃ㅁ"+vec.size());
+	public Grade[] descUseSort() {
+		Grade[] scores = new Grade[vec.size()];
 		vec.copyInto(scores);
-//		for (int integer : scores) {
-//			System.out.println(integer + "넘버 : " + num);
-//		}
-//		int temp;
-//		for (int i = 0; i < scores.length; i++) {
-//			for (int j = i+1	; j < scores.length; j++) {
-//				if (scores[i] < scores[j]) {
-//					temp = scores[i];
-//					scores[i] = scores[j];
-//					scores[j] = temp;
-//				}
-//			}
-//		}
-//		return scores;
+		
+		Grade temp;
+		for (int i = 0; i < scores.length; i++) {
+			for (int j = i+1; j < scores.length; j++) {
+				if (scores[i].getTotal() < scores[j].getTotal()) {
+					temp = scores[i];
+					scores[i] = scores[j];
+					scores[j] = temp;
+				}
+			}
+		}
+		return scores;
 	}
 }
