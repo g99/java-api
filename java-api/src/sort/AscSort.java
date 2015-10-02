@@ -1,4 +1,5 @@
 package sort;
+import java.util.Arrays;
 import java.util.Vector;
 /**
  * @file_name : AscSort.java
@@ -11,25 +12,26 @@ public class AscSort {
 		Vector<Integer> vector = new Vector<Integer>();
 		int[] arr = { 2, 5, 68, 79, 123, 4, 9 };
 		int temp = 0;
-		System.out.println("=========내림차순=========");
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = i+1; j < arr.length; j++) {
-				if (arr[i] < arr[j]) {
-					temp = arr[i]; // 스왑 정렬
-					arr[i] = arr[j];
-					arr[j] = temp;
-				}
-			}
-		}
+		System.out.println("=========오름차순=========");
+//		for (int i = 0; i < arr.length; i++) {
+//			for (int j = i+1; j < arr.length; j++) {
+//				if (arr[i] > arr[j]) {
+//					temp = arr[i]; // 스왑 정렬
+//					arr[i] = arr[j];
+//					arr[j] = temp;
+//				}
+//			}
+//		}
+		Arrays.sort(arr); //한방에 위에 주석만큼 처리해줌
 		for (int i : arr) {
 			vector.add(i);
 		}
 		System.out.println(vector);
-		System.out.println("=========오름차순=========");
+		System.out.println("=========내림차순=========");
 		Vector<Integer> vector2 = new Vector<Integer>();
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i+1; j < arr.length; j++) {
-				if (arr[i] > arr[j]) { 
+				if (arr[i] < arr[j]) { 
 					temp = arr[i]; // 스왑 정렬
 					arr[i] = arr[j];
 					arr[j] = temp;
