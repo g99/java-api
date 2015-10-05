@@ -13,4 +13,8 @@ public interface MemberService {
 	public Member searchByID(String id);
 	//전체회원정보 출력
 	public Map<String, Object> allInfo();
+	//회원탈퇴
+	public String deleteId(String id);
+	//비번수정
+	public String changePsw(String id, String pass);
 }
