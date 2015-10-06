@@ -49,5 +49,12 @@ public class StringMethod {
 		System.out.println("[3] H.ello Java!!!".replace("a", "")); // Hello Jv!!! 
 		System.out.println("[4] Hello Java!!!".replaceAll(".a", "")); // Hello !!!
 		System.out.println("[5] H.e.l.l.o Java!!!".replaceAll("[.a]", "")); // Hello Jv!!!
+		System.out.println("Hello  Java".toUpperCase()); // 대문자
+		System.out.println("Hello  Java".toLowerCase()); // 소문자
+		System.out.println("Hello  Java".length() + "글자"); // 11글자(공백포함)
+		System.out.println("Hello  Java".replace(" ", "")); // 모든공백 제거
+		System.out.println("         Hello  Java           ".trim()); // 앞뒤공백 제거
+		System.out.println(String.valueOf(5)); // 스태틱 메소드(=클래스 메소드)
+		//String.valueOf()는 ()안의 타입을 String으로 변환해 줍니다.
 	}
 }
