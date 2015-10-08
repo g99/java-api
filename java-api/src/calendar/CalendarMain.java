@@ -1,5 +1,6 @@
 package calendar;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -11,7 +12,7 @@ import java.util.StringTokenizer;
  * @date : 2015. 10. 6.
  * @story : Calendar 클래스
  */
-public class CalendarMain {
+public class CalendarMain implements Serializable{
 	/**
 	 * 시작일 (2015-09-14)로부터 오날까지 일수 구하기 종료일 (2016-02-05)에서 오늘날짜까지 남은 일수 구하기
 	 */
