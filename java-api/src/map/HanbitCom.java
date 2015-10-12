@@ -9,7 +9,7 @@ public class HanbitCom {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String id, pass, name, age, addr;
-		MemberService service = new MemberServiceImpl();
+		MemberService service = MemberServiceImpl.getInstance(); // 싱글톤 패턴으로 변형
 		while (true) {
 			System.out.println("1.회원가입 2.로그인 3.총회원수 4.ID검색 5.전체회원정보출력 6.회원탈퇴 7.비밀번호변경 8.종료");
 			switch (scanner.nextInt()) {

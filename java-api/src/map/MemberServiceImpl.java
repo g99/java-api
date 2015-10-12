@@ -6,6 +6,11 @@ import java.util.Map;
 
 public class MemberServiceImpl implements MemberService {
 	Map<String, Object> map = new HashMap<String, Object>();
+	private static MemberServiceImpl Instance = new MemberServiceImpl();
+	
+	public static MemberServiceImpl getInstance() {
+		return Instance;
+	}
 
 	/**
 	 * 회원정보를 받아서 등록
